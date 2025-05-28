@@ -1,5 +1,8 @@
 // main.dart
+import 'package:catatan_supabase/login_page.dart';
+import 'package:catatan_supabase/splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'note_list_page.dart';
 import 'note_model.dart';
@@ -12,6 +15,9 @@ const String supabaseAnonKey =
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Inisialisasi GetStorage
+  await GetStorage.init();
 
   await Supabase.initialize(
     url: supabaseUrl,
@@ -54,7 +60,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const NoteListPage(),
+      home: const SplashScreen(),
       debugShowCheckedModeBanner: false,
     );
   }

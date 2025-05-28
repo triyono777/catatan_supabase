@@ -9,7 +9,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  supabase: ^2.7.0
+  # supabase: ^2.7.0
+  get_storage: ^2.1.1
   supabase_flutter: ^2.9.0
 
 dev_dependencies:

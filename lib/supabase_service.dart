@@ -80,7 +80,7 @@ class SupabaseService {
     try {
       await _client.from(notesTable).update(noteData).eq('id', id);
     } catch (e) {
-      // print('Error updating note: $e');
+      print('Error updating note: $e');
       // throw Exception('Gagal memperbarui catatan: $e');
       rethrow;
     }
@@ -91,7 +91,7 @@ class SupabaseService {
     try {
       await _client.from(notesTable).delete().eq('id', id);
     } catch (e) {
-      // print('Error deleting note: $e');
+      print('Error deleting note: $e');
       // throw Exception('Gagal menghapus catatan: $e');
       rethrow;
     }
